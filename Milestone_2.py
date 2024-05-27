@@ -1,6 +1,7 @@
 # Imports
 import random 
 
+# %%
 # List of words for hangman
 word_list = ["Mango", "Coconut", "Kiwi", "Orange", "Grapes"]
 print(word_list)

@@ -33,11 +33,11 @@ def user_guess():
     Returns:
         str: letter guess by the user
     """
-    guess = input("Please enter a lette")
 
     while True:
+        guess = input("Please enter a lette")
         if guess.isalpha() == False or len(guess) != 1:
-            print("Oops! that is not a valid input, Please try again")
+            print("Invalid letter. Please, enter a single alphabetical character.")
             guess = input("Please enter a lette")
         else:
             break
@@ -46,3 +46,4 @@ def user_guess():
 
 # %%
 user_guess()
+# %%

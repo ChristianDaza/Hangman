@@ -120,4 +120,5 @@ print(hang_1.word)
 hang_1.ask_for_input()
 # %%
 print(hang_1.list_of_guesses)
+print(hang_1.word_guessed)
 # %%

@@ -88,7 +88,7 @@ class  Hangman:
         else:
             print(f"Sorry, {guess} is not in the word. Try again.")
 
-    def user_guess(self):
+    def ask_for_input(self):
         """ 
         This function takes a single letter from user guess and also checks if the guess in in the word.
 
@@ -109,15 +109,15 @@ class  Hangman:
                 print("guess in list_of_guesses")
                 
             else:
-                if check_guess(guess) == True:
-                    self.list_of_guesses.append(guess)
+                check_guess(guess)
+                self.list_of_guesses.append(guess)
                 break
 # %%
 hang_1 = Hangman(word_list_1)
 print(hang_1.word)
 
 # %%
-hang_1.user_guess()
+hang_1.ask_for_input()
 # %%
 print(hang_1.list_of_guesses)
 # %%

@@ -46,4 +46,3 @@ def user_guess():
 
 # %%
 user_guess()
-# %%

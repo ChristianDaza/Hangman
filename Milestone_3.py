@@ -23,6 +23,20 @@ def random_choice(word_list):
     return print(random_word)
 
 #%%
+
+def check_guess(guess):
+    """" 
+    This function check if the user guess is in the randomly chosen word.
+    
+    Returns: 
+        str: confirming if the user guess was right or wrong.
+    """
+    guess = guess.lower()
+    if guess in random_word:
+        print(f"Good guess! {guess} is in the word.")
+    else:
+        print(f"Sorry, {guess} is not in the word. Try again.")
+#%%
 # Get user imput
 def user_guess():
     """ 
@@ -43,29 +57,19 @@ def user_guess():
         else:
             break
     print(f"{guess} is a good guess!")
-
-
-# %%
-user_guess()
-
-# %%
-
-def check_guess(guess):
-    """" 
-    This function check if the user guess is in the randomly chosen word.
+    check_guess(guess)
     
-    Returns: 
-        str: confirming if the user guess was right or wrong.
-    """
-    guess = guess.lower()
-    if guess in random_word:
-        print(f"Good guess! {guess} is in the word.")
-    else:
-        print(f"Sorry, {guess} is not in the word. Try again.")
+
+
 # %%
 random_choice(word_list)
+# %%
+user_guess()
+# %%
+
 # %%
 check_guess("R")
 
 # %%
+random_choice(word_list)
 check_guess("x")

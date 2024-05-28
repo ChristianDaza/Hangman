@@ -1,12 +1,12 @@
+#%%
 # Imports
 import random 
 
 # %%
 # List of words for hangman
 word_list = ["Mango", "Coconut", "Kiwi", "Orange", "Grapes"]
-print(word_list)
 
-
+#%%
 # Random selector function
 def random_choice(word_list):
     """ 
@@ -18,6 +18,7 @@ def random_choice(word_list):
     Returns:
         str: random word choosen from the list.
     """
+    global random_word
     random_word = random.choice(word_list)
     return print(random_word)
 
@@ -46,19 +47,22 @@ def user_guess():
 
 # %%
 user_guess()
-# %%
-# Check user guess is in word
 
-def check_guess():
+# %%
+
+def check_guess(guess):
     """" 
     This function check if the user guess is in the randomly chosen word.
     
     Returns: 
         str: confirming if the user guess was right or wrong.
     """
-    if user_guess() in random_choice(word_list):
+    if guess in random_word:
         print(f"Good guess! {guess} is in the word.")
     else:
         print(f"Sorry, {guess} is not in the word. Try again.")
 # %%
-check_guess()
+random_choice(word_list)
+# %%
+check_guess("x")
+# %%

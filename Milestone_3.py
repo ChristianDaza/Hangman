@@ -47,3 +47,10 @@ def user_guess():
 # %%
 user_guess()
 # %%
+# Check user guess is in word
+
+def check_guess(user_guess):
+    if guess is in random_word:
+        print(f"Good guess! {guess} is in the word.")
+    else:
+          print(f"Sorry, {guess} is not in the word. Try again.")

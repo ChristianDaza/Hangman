@@ -57,6 +57,7 @@ def check_guess(guess):
     Returns: 
         str: confirming if the user guess was right or wrong.
     """
+    guess = guess.lower()
     if guess in random_word:
         print(f"Good guess! {guess} is in the word.")
     else:
@@ -64,5 +65,7 @@ def check_guess(guess):
 # %%
 random_choice(word_list)
 # %%
-check_guess("x")
+check_guess("R")
+
 # %%
+check_guess("x")

@@ -18,8 +18,8 @@ def random_choice(word_list):
     Returns:
         str: random word choosen from the list.
     """
-    word = random.choice(word_list)
-    return print(word)
+    random_word = random.choice(word_list)
+    return print(random_word)
 
 #%%
 # Get user imput

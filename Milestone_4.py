@@ -40,7 +40,7 @@ def check_guess(guess):
 # Get user imput
 def user_guess():
     """ 
-    This function takes a single letter from user guess.
+    This function takes a single letter from user guess and also checks if the guess in in the word.
 
     Args:
         guess (str): take a single letter from the user.
@@ -58,18 +58,7 @@ def user_guess():
             break
     print(f"{guess} is a good guess!")
     check_guess(guess)
-    
 
 
 # %%
-random_choice(word_list)
-# %%
-user_guess()
-# %%
-
-# %%
-check_guess("R")
-
-# %%
-random_choice(word_list)
-check_guess("x")
+#Class

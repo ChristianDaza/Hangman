@@ -70,3 +70,16 @@ class  Hangman:
         self.word_guessed = ["_"]*len(self.word)
         self.num_letter = len(set(self.word))
         self.list_of_guesses = []
+
+    def check_guess(self, guess):
+        """" 
+        This function check if the user guess is in the randomly chosen word.
+        
+        Returns: 
+            str: confirming if the user guess was right or wrong.
+        """
+        self.guess = self.guess.lower()
+        if guess in random_word:
+            print(f"Good guess! {self.guess} is in the word.")
+        else:
+            print(f"Sorry, {self.guess} is not in the word. Try again.")

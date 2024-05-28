@@ -1,5 +1,5 @@
 # Hangman
-AiCore hangman project
+Hangman: interactive python base version of the hangman game.
 
 ## Table of content
 [Description](#Description)

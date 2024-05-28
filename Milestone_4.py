@@ -63,10 +63,10 @@ def user_guess():
 # %%
 #Class
 class  Hangman:
-    def __innit__(self, word_list, num_lives = 5, list_of_guesses = []):
+    def __innit__(self, word_list, num_lives = 5):
         self.word_list = word_list
         self.num_lives = num_lives if num_lives is not 5 else 5 
         self.word = random_choice(word_list)
         self.word_guessed = ["_"]*len(self.word)
-        self.num_letter = list(set(self.word))
-        #self.list_of_guesses = [list_of_guesses.append(self.word_guessed) if self.word_guessed in self.word and not in self.list_of_guesses]
+        self.num_letter = len(set(self.word))
+        self.list_of_guesses = []

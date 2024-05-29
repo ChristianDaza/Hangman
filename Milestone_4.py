@@ -34,11 +34,11 @@ class  Hangman:
                 if i == guess:
                     guess_index = self.word.index(i)
                     self.word_guessed[guess_index] = guess
-            print(self.word_guessed)
-            self.num_lives = self.num_lives -1
-            print(f"Remaining lives {self.num_lives}")   
+            print(self.word_guessed)  
         else:
-            print(f"Sorry, {guess} is not in the word. Try again.")
+            print(f"Sorry, {guess} is not in the word.")
+            self.num_lives = self.num_lives -1
+            print(f"You have {self.num_lives} lives left.")
 
     def ask_for_input(self):
         """ 
@@ -77,6 +77,6 @@ print(hang_1.word)
 hang_1.ask_for_input()
 # %%
 
-print(hang_1.word_guessed)
+print(hang_1.num_lives)
 
 # %%

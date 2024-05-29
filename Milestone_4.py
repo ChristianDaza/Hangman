@@ -28,6 +28,8 @@ class  Hangman:
                     guess_index = self.word.index(i)
                     self.word_guessed[guess_index] = guess
             print(self.word_guessed)
+            self.num_lives = self.num_lives -1
+            print(f"Remaining lives {self.num_lives}")
             
 
         else:
@@ -59,7 +61,7 @@ class  Hangman:
                 break
 # %%
 word_list_1 = ["mango", "coconut", "kiwi", "orange", "grapes"]
-hang_1 = Hangman(word_list_1)
+hang_1 = Hangman(word_list_1, 8)
 print(hang_1.word)
 
 # %%

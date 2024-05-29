@@ -14,10 +14,17 @@ class  Hangman:
 
     def check_guess(self, guess):
         """" 
-        This function check if the user guess is in the randomly chosen word.
+        This function:
+             Checks if the user guess is in the randomly chosen word.
+             Saves the correct guess in a list with their correct guess.
+             Updates the number of ramaining lives after each guess.
+
+
         
         Returns: 
-            str: confirming if the user guess was right or wrong.
+            str: string confirming if the user guess was right or wrong.
+            lst: list with the correctly guessed letter, in their position correct positions.
+            int: number of remaining lives after each guess.
         """
 
         guess = guess.lower()
@@ -29,21 +36,23 @@ class  Hangman:
                     self.word_guessed[guess_index] = guess
             print(self.word_guessed)
             self.num_lives = self.num_lives -1
-            print(f"Remaining lives {self.num_lives}")
-            
-
+            print(f"Remaining lives {self.num_lives}")   
         else:
             print(f"Sorry, {guess} is not in the word. Try again.")
 
     def ask_for_input(self):
         """ 
-        This function takes a single letter from user guess and also checks if the guess in in the word.
+        This function:
+             Checks that the user guess is a single alphabetical character.
+             Pass the guess that fulfils the above conditions into the check_guess().
+
 
         Args:
             guess (str): take a single letter from the user.
 
         Returns:
-            str: letter guess by the user
+            str: a string telling the user the guess is invalid and to try again.
+            str: a string telling the user that the letter had alrady being used for a previous guess.
         """
         
         while True:
@@ -53,7 +62,7 @@ class  Hangman:
                 guess = input("Please enter a lette")
                 
             elif guess in self.list_of_guesses:
-                print("guess in list_of_guesses")
+                print("This letter has already being used for a previous guess")
                 
             else:
                 self.check_guess(guess)

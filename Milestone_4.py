@@ -21,13 +21,13 @@ class  Hangman:
         """
 
         guess = guess.lower()
-        if guess is self.word:
+        if guess in self.word:
             print(f"Good guess! {guess} is in the word")
             for i in self.word:
                 if i == guess:
                     guess_index = self.word.index(i)
                     self.word_guessed[guess_index] = guess
-                    print(self.word_guessed)
+            print(self.word_guessed)
             
 
         else:
@@ -54,16 +54,18 @@ class  Hangman:
                 print("guess in list_of_guesses")
                 
             else:
-                check_guess(guess)
+                self.check_guess(guess)
                 self.list_of_guesses.append(guess)
                 break
 # %%
+word_list_1 = ["mango", "coconut", "kiwi", "orange", "grapes"]
 hang_1 = Hangman(word_list_1)
 print(hang_1.word)
 
 # %%
 hang_1.ask_for_input()
 # %%
+
 print(hang_1.word_guessed)
 
 # %%

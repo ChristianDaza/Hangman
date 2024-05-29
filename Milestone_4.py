@@ -4,7 +4,7 @@ import random
 
 # %%
 # List of words for hangman
-word_list_1 = ["Mango", "Coconut", "Kiwi", "Orange", "Grapes"]
+word_list_1 = ["mango", "coconut", "kiwi", "orange", "grapes"]
 
 #%%
 # Random selector function
@@ -83,8 +83,15 @@ class  Hangman:
         """
 
         guess = guess.lower()
-        if guess in self.word:
-            print(f"Good guess! {guess} is in the word.")
+        if guess is self.word:
+            print(f"Good guess! {guess} is in the word")
+            for i in self.word:
+                if i == guess:
+                    guess_index = self.word.index(i)
+                    self.word_guessed[guess_index] = guess
+                    print(self.word_guessed)
+            
+
         else:
             print(f"Sorry, {guess} is not in the word. Try again.")
 
@@ -119,5 +126,6 @@ print(hang_1.word)
 # %%
 hang_1.ask_for_input()
 # %%
-print(hang_1.list_of_guesses)
+print(hang_1.word_guessed)
+
 # %%

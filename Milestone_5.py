@@ -4,13 +4,16 @@
 import random
 class  Hangman:
      
-    def __init__(self, word_list:list[str], num_lives = 5):
-        self.word_list = word_list
-        self.num_lives = num_lives if num_lives != 5 else 5 
+    def __init__(self, word_list, num_lives = 5):
         self.word = random.choice(word_list)
         self.word_guessed = ["_"]*len(self.word)
-        self.num_letter = len(set(self.word))
-        self.list_of_guesses = []
+        self.word_list = word_list
+        self.num_letters = len(set(self.word))
+        self.num_lives = num_lives if num_lives != 5 else 5 
+        self.list_letters = []
+
+        print(f"The mistery word has {self.num_letters} characters")
+        print(self.word_guessed)
 
     def check_guess(self, guess):
         """" 
@@ -61,12 +64,12 @@ class  Hangman:
                 print("Invalid letter. Please, enter a single alphabetical character.")
                 guess = input("Please enter a lette")
                 
-            elif guess in self.list_of_guesses:
+            elif guess in self.list_letters:
                 print("This letter has already being used for a previous guess")
                 
             else:
                 self.check_guess(guess)
-                self.list_of_guesses.append(guess)
+                self.list_letters.append(guess)
                 break
     
     def play_game(self, word_list):
@@ -75,18 +78,17 @@ class  Hangman:
         while True:
             if num_lives == 0:
                 print("You lost!")
+
             elif self.num_letters > 0: 
                 self.ask_for_input()
-            elif num_lives != 0 and self.num_letter <= 0:
+            elif num_lives != 0 and self.num_letters <= 0:
                 print("Congratulations. You won the game!")
 
 
 # %%
 word_list_1 = ["mango", "coconut", "kiwi", "orange", "grapes"]
 
-
-# %%
-
+hang_1 = Hangman(word_list_1)
 # %%
 
 

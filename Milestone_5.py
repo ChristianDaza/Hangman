@@ -37,6 +37,7 @@ class  Hangman:
                 if i == guess:
                     guess_index = self.word.index(i)
                     self.word_guessed[guess_index] = guess
+            self.num_letters = self.num_letters -1
             print(self.word_guessed)  
         else:
             print(f"Sorry, {guess} is not in the word.")
@@ -87,9 +88,17 @@ class  Hangman:
 
 # %%
 word_list_1 = ["mango", "coconut", "kiwi", "orange", "grapes"]
-
 hang_1 = Hangman(word_list_1)
+print(hang_1.word) 
+print(hang_1.num_letters) 
+print(hang_1.list_letters)
 # %%
 
 
 # %%
+hang_1.ask_for_input()
+
+# %%
+print(hang_1.num_letters) 
+print(hang_1.list_letters)
+print(hang_1.num_lives)

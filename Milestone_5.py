@@ -105,15 +105,14 @@ print(hang_1.num_lives)
 # %%
 word = "coconut"
 # %%
-for letter in word:
-    list_doubles = []
-    res = dict()
-    for num in range(0,len(word)):
-        if(letter==word[num]):
-            list_doubles.append(num)
-    res[letter] = list_doubles
-    print(list_doubles)
-    print(res)
+word = "coconut"
+guess = "o"
+
+list_doubles = []
+for num in range(0,len(word)):
+    if(guess==word[num]):
+        list_doubles.append(num)
+print(list_doubles)
 # %%
 list_doubles = []
 word = "coconut"
@@ -122,4 +121,5 @@ for letters in word:
     if  letters == guess and word.count(letters)>1:
         list_doubles.append(letters)
 print(list_doubles)
+
 # %%

@@ -33,9 +33,10 @@ class  Hangman:
         guess = guess.lower()
         if guess in self.word:
             print(f"Good guess! {guess} is in the word")
-            for i in self.word:
-                if i == guess:
-                    guess_index = self.word.index(i)
+            
+            for letter in self.word:
+                if letter == guess:
+                    guess_index = self.word.index(letter)
                     self.word_guessed[guess_index] = guess
             self.num_letters = self.num_letters -1
             print(self.word_guessed)  
@@ -92,8 +93,6 @@ hang_1 = Hangman(word_list_1)
 print(hang_1.word) 
 print(hang_1.num_letters) 
 print(hang_1.list_letters)
-# %%
-
 
 # %%
 hang_1.ask_for_input()
@@ -102,3 +101,25 @@ hang_1.ask_for_input()
 print(hang_1.num_letters) 
 print(hang_1.list_letters)
 print(hang_1.num_lives)
+
+# %%
+word = "coconut"
+# %%
+for letter in word:
+    list_doubles = []
+    res = dict()
+    for num in range(0,len(word)):
+        if(letter==word[num]):
+            list_doubles.append(num)
+    res[letter] = list_doubles
+    print(list_doubles)
+    print(res)
+# %%
+list_doubles = []
+word = "coconut"
+guess = "o"
+for letters in word:
+    if  letters == guess and word.count(letters)>1:
+        list_doubles.append(letters)
+print(list_doubles)
+# %%

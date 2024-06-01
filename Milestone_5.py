@@ -3,6 +3,28 @@
 #Class
 import random
 class  Hangman:
+    """ 
+    A hangman game that ask the user for a letter and then checks if the letter in in the word.
+    The game starts with a default number of lives and a ramdomly selected word from a list.
+    
+    Parameters:
+        word_list (list): 
+            List of words to be used in the game.
+        num_lives (int): 
+            Number of lives the player has.
+
+    Attributes:
+        word (str): 
+            The word to be guess by the user selected ramdomly from word_list.
+        word_guessed (list): 
+            A list of letters of the word, with "_" for each letter no yet guessed.
+        num_letters (int): 
+            Number of unique letter in the word that has not been guessed yet.
+        num_lives (int): 
+            Number of lives the player has.
+        list_letters (list): 
+            A list of letter that have laready been tried.
+    """
      
     def __init__(self, word_list, num_lives = 5):
         self.word = random.choice(word_list)

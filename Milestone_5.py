@@ -24,6 +24,12 @@ class  Hangman:
             Number of lives the player has.
         list_letters (list): 
             A list of letter that have laready been tried.
+    
+    Methods:
+    check_guess(letter):
+        Checks if the guess is in the word.
+    ask_for_input()
+        Asks the user for a letter.
     """
      
     def __init__(self, word_list, num_lives = 5):
@@ -40,16 +46,21 @@ class  Hangman:
     def check_guess(self, guess):
         """" 
         This function:
-             Checks if the user guess is in the randomly chosen word.
-             Saves the correct guess in a list with their correct guess.
-             Updates the number of ramaining lives after each guess.
+             Checks if the user letter is in the randomly chosen word.
+             If it is, it replaces the "_" in the word_guessed list wiht the letter.
+             If is not, it reduces the number of lives by 1.
 
-
+        Prameters:
+            guess (str):
+                The letter to be checked.
         
         Returns: 
-            str: string confirming if the user guess was right or wrong.
-            lst: list with the correctly guessed letter, in their position correct positions.
-            int: number of remaining lives after each guess.
+            str: 
+                string confirming if the user guess was right or wrong.
+            list: 
+                List with the correctly guessed letters, in their correct positions.
+            int: 
+                Number of remaining lives after each wrong guess.
         """
 
         guess = guess.lower()

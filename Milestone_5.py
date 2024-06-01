@@ -83,13 +83,15 @@ class  Hangman:
              Checks that the user guess is a single alphabetical character.
              Pass the guess that fulfils the above conditions into the check_guess().
 
-
-        Args:
-            guess (str): take a single letter from the user.
+        Parameters:
+            guess (str): 
+                Take a single letter from the user.
 
         Returns:
-            str: a string telling the user the guess is invalid and to try again.
-            str: a string telling the user that the letter had alrady being used for a previous guess.
+            str: 
+                A string telling the user the guess is invalid and to try again.
+            str: 
+                A string telling the user that the letter had alrady being used for a previous guess.
         """
         
         while True:
@@ -99,40 +101,41 @@ class  Hangman:
                 guess = input("Please enter a lette")
                 
             elif guess in self.list_letters:
-                print("This letter has already being used for a previous guess")
+                print("You already tried that letter!")
                 
             else:
                 self.check_guess(guess)
                 self.list_letters.append(guess)
                 break
     
-    def play_game(self, word_list):
-        num_lives = 5
-        game = Hangman(word_list, num_lives)
-        while True:
-            if num_lives == 0:
-                print("You lost!")
-
-            elif self.num_letters > 0: 
-                self.ask_for_input()
-            elif num_lives != 0 and self.num_letters <= 0:
-                print("Congratulations. You won the game!")
+    # def play_game(self, word_list):
+        
+    #     game = Hangman(word_list, num_lives = 5)
+    #     while True:
+    #         if game.num_lives == 0:
+    #             print("You lost!")
 
 
-# %%
-word_list_1 = ["mango", "coconut", "kiwi", "orange", "grapes"]
-hang_1 = Hangman(word_list_1)
-print(hang_1.word) 
-print(hang_1.num_letters) 
-print(hang_1.list_letters)
+    #         elif game.num_letters > 0: 
+    #             game.ask_for_input()
+    #         elif game.num_lives != 0 and game.num_letters <= 0:
+    #             print("Congratulations. You won the game!")
+
 
 # %%
-hang_1.ask_for_input()
+
+#hang_1 = Hangman(word_list_1)
+#print(hang_1.word) 
+#print(hang_1.num_letters) 
+#print(hang_1.list_letters)
 
 # %%
-print(hang_1.num_letters) 
-print(hang_1.list_letters)
-print(hang_1.num_lives)
+#hang_1.ask_for_input()
+
+# %%
+#print(hang_1.num_letters) 
+#print(hang_1.list_letters)
+#print(hang_1.num_lives)
 
 # %%
 word = "coconut"
@@ -155,3 +158,37 @@ for letters in word:
 print(list_doubles)
 
 # %%
+def play_game(word_list):
+        """
+        This function:
+            Creates a Hangman class instance
+            Call the Hangman calls methods.
+            Allows the user to play Hnagman.
+
+        Parameter:
+        word_list (list):
+            List of words to be used in the game.
+
+        Returns:
+            str:
+                Telling the user he or she has lost the game.
+            ask_for_input():
+                Calls this method to continue playing.
+            str:
+                Telling the user he or she has won the game.
+        """
+        
+        game = Hangman(word_list, num_lives = 5)
+        while True:
+            if game.num_lives == 0:
+                print("You lost!")
+                break
+
+            elif game.num_letters > 0: 
+                game.ask_for_input()
+            elif game.num_lives != 0 and game.num_letters <= 0:
+                print("Congratulations. You won the game!")
+                break
+# %%
+word_list = ["mango", "coconut", "kiwi", "orange", "grapes"]
+play_game(word_list)

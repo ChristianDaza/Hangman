@@ -135,7 +135,7 @@ def play_game(word_list):
             elif game.num_lives != 0 and game.num_letters <= 0:
                 print("Congratulations. You won the game!")
                 break
-# %%
-word_list = ["mango", "coconut", "kiwi", "orange", "grapes"]
-play_game(word_list)
-# %%
+#%%
+if __name__ == "__main__":
+    word_list = ["apple", "coconut", "papaya", "kiwi", "Pear"]
+    play_game(word_list)

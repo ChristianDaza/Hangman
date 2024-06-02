@@ -40,7 +40,7 @@ git clone https://github.com/ChristianDaza/Hangman.git
 
 ## Usage
 
-Once clone, use the command line to navigate to the clone repository. Once inside run:
+Once cloned, use the command line to navigate to the clone repository. Once inside run:
 ```
 python3 Milestone_5.py
 ```

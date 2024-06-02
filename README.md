@@ -24,13 +24,19 @@ The Hangman project allows the a user to play a python version of the hangman ga
 ## Installation
 The source of this code is currently hosted at: https://github.com/ChristianDaza/Hangman.git
 
-To install clone this git repository using the following code:
-'git clone https://github.com/ChristianDaza/Hangman.git'
+Clone this git repository into your machine using the following code:
+```
+git clone https://github.com/ChristianDaza/Hangman.git
+```
 
 
 ## Usage
-In the command line run the main.py file from this repository.
 
+Once clone, use the command line to navigate to the clone repository. Once inside run:
+```
+python3 Milestone_5.py
+```
+ 
 The Hangman class requires a list of words and number of lives. If the user does not input a number of lives, the default value of 5 will be used.
 
 Use the ask_for_input() method from the Hangman class to begin the game, this method does not initially require a parameter to run but when run it will as for input from the user.
@@ -43,4 +49,5 @@ The game will end when the user corretly guesses all the letters within the rand
 
 ## File struture
 ## Licence
+
 

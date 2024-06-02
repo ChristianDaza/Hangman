@@ -31,7 +31,7 @@ class  Hangman:
     ask_for_input()
         Asks the user for to guess a letter.
     """
-    def __init__(self, word_list, num_lives):
+    def __init__(self, word_list):
         self.word = random.choice(word_list)
         self.word_guessed = ["_"]*len(self.word)
         self.word_list = word_list
@@ -123,7 +123,7 @@ def play_game(word_list):
             str:
                 Telling the user he or she has won the game.
         """
-        game = Hangman(word_list, num_lives = 5)
+        game = Hangman(word_list)
 
         while True:
             if game.num_lives == 0:

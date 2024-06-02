@@ -91,7 +91,7 @@ class  Hangman:
                 A string telling the user that the letter had alrady being used for a previous guess.
         """
         while True:
-            guess = input("Please enter a letter")
+            guess = input("Please enter a letter").replace(" ", "")
             if guess.isalpha() == False or len(guess) != 1:
                 print("Invalid letter. Please, enter a single alphabetical character.")
                 guess 

@@ -44,7 +44,7 @@ Once cloned, use the command line to navigate to the clone repository. Once insi
 ```
 python3 Milestone_5.py
 ```
-Upon runnign the file the lenght of the word represented by individual undercores and number of unquie letters in the word with be shown to the user. Then the user will be asked to enter a guess in the form of a singular alpahbetical character. The script accept the guess immediate after the prompt message or with a space between the message and the actual guess.
+Upon runnign the file the lenght of the word represented by individual undercores and number of unquie letters in the word will be shown to the user. Then the user will be asked to enter a guess in the form of a singular alpahbetical character. The script accept the guess immediate after the prompt message or with a space between the message and the actual guess.
 
 If the guess is correct the corresponding underscore will be switched to guessed letter, if not the user will loss a live. The game will end when the user correclty guesses all the letters of the random word before running out of lives or if the user's lives reaches 0.
 

@@ -1,8 +1,10 @@
 # Hangman
-Hangman: interactive python base version of the hangman game.
+An interactive Python base version of the hangman game.   
 
 ## Description
-The Hangman project allows the a user to play a python version of the hangman game, in which a random unkown word is selected, and the user tries to guess unkown word, by entering one letter at the time. The game end when the user correctly gueses all the letter in the word before runnign out of lives or the live count reaches 0. The game will end if the user runs out of lives or correctly guesses the word. This project aimed at solidifying my python, command line, GitHub and conda skills from the AiCore courses by applying them into a project.
+Hangman is a Python script that allows the user to play the hangman game in the command line. When the script is run the user is prompted to enter a letter to try to guess a randomly selected word, one letter at the time. The user begins with five lives, which decreases after each wrong guess. The game ends when the user correctly guesses all the letters of the random word or run out of lives. The aim of this project was to solidify the Python, command line and GitHub skills from the AiCore courses by applying them into a project. From this project I learn that is better to break down a function, creating the individual lines of code and then combining them into the function. I also learn that you don't need large or many additions to your project to make it unique, refining your code to be easily undertood or adapting certain areas of your code with the end user in mind, creates the greates results.
+
+
 
 ## Table of content
 - [Description](#Description)
@@ -13,12 +15,12 @@ The Hangman project allows the a user to play a python version of the hangman ga
 - [Lincence](#Licence)
 
 ## Main Featues
-- Selects a random word from a list.
-- Ask the user for input.
-- Checks if the input is single alphabetical character.
-- Checks if the user input is present in the randomly chosen word:
-    - If present the guess will be print in a list, where its position is the same as in the random word.
-    - If not present a live will be taken.
+- Requires minimal coding from the user.
+- Already comes with a list of words wiht varying degrees of difficulty.
+- Displays number of letter to the user as underscores: "_".
+- Gives feedback to the user based on the guess.
+- Substitutes undercores with the correclty guess letters, in their orignal position from the random word.
+- Displays and updates the number of lives the user has after each wrong guess.
     
 
 ## Installation

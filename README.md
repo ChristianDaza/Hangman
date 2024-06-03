@@ -1,4 +1,5 @@
 # Hangman
+![](https://img.shields.io/badge/platforms%20-macOS--64%20%7C%20win--64-lightgrey) ![](https://img.shields.io/badge/version-1.0.0-blue)
 
 An interactive Python based version of the hangman game.   
 

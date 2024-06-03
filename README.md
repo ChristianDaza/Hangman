@@ -15,7 +15,6 @@ Hangman is a Python script that allows the user to play the hangman game in the 
 - [Main Features](#Main_Features)
 - [Intallation](#Intallation)
 - [Usage](#Usage)
-- [File structure](#File_structure)
 - [Lincence](#Licence)
 
 ## Main Featues

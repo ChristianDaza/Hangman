@@ -1,6 +1,5 @@
 
 # %%
-
 import random
 
 class  Hangman:
@@ -102,6 +101,7 @@ class  Hangman:
                 self.check_guess(guess)
                 self.list_letters.append(guess)
                 break
+
 # %%
 def play_game(word_list):
         """
@@ -135,7 +135,6 @@ def play_game(word_list):
             elif game.num_lives != 0 and game.num_letters <= 0:
                 print("Congratulations. You won the game!")
                 break
-
 
 #%%
 if __name__ == "__main__":

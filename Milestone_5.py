@@ -1,7 +1,8 @@
 
 # %%
-#Class
+
 import random
+
 class  Hangman:
     """ 
     A hangman game that ask the user for a guess in the form of a letter and then checks if the letter in the word.

@@ -11,8 +11,6 @@ class  Hangman:
     Parameters:
         word_list (list): 
             List of words to be used in the game.
-        num_lives (int): 
-            Number of lives the player has.
 
     Attributes:
         word (str): 

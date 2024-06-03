@@ -31,12 +31,12 @@ class  Hangman:
     ask_for_input()
         Asks the user for to guess a letter.
     """
-    def __init__(self, word_list, num_lives):
+    def __init__(self, word_list):
         self.word = random.choice(word_list)
         self.word_guessed = ["_"]*len(self.word)
         self.word_list = word_list
         self.num_letters = len(set(self.word))
-        self.num_lives = num_lives if num_lives <= 5 else 5 
+        self.num_lives = self.num_lives =  self.num_letters if self.num_letters > 5 else 5
         self.list_letters = []
 
         print(f"The mistery word has {self.num_letters} characters")
@@ -123,7 +123,7 @@ def play_game(word_list):
             str:
                 Telling the user he or she has won the game.
         """
-        game = Hangman(word_list, num_lives = 5)
+        game = Hangman(word_list)
 
         while True:
             if game.num_lives == 0:

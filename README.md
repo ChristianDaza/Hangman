@@ -36,11 +36,11 @@ Once cloned, use the command line to navigate to the clone repository. Then move
 ```
 python3 Milestone_5.py
 ```
-Upon runnign the file the lenght of the word represented by individual undercores and number of unquie letters in the word will be shown to the user. 
+Upon runnign the file, the number of unique letters in the word will be shown to the user, as well as the lenght of the word  as individual undercores. 
 ```
 The mistery word has 4 characters.
 ['_', '_', '_', '_']
-Please enter a letter 
+Please enter a letter: 
 ```
 Then the user will be asked to enter a guess in the form of a singular alpahbetical character. The script accepts the guess immediate after the prompt message or with a space between the message and the actual guess.
 ```
@@ -48,7 +48,7 @@ Please enter a letter: l
 Please enter a letter:l 
 
 ```
-If the guess is correct the corresponding underscore will be switched to guessed letter, if not the user will lose a live. 
+If the guess is correct the corresponding underscore will be switched to the guessed letter, if not the user will lose a live. 
 ```
 Good guess! l is in the word
 ['l', '_', '_', '_']
@@ -68,13 +68,13 @@ You lost!
 ## Main Featues
 
 - Requires minimal coding from the user.
-- Already comes with a list of words with varying degrees of difficulties.
-- Displays number of letter to the user as underscores: "_".
+- Already comes with a list of words with varying degrees of difficulty.
+- Displays the number of letters to the user as underscores.
 - Gives feedback to the user based on the guess.
 - Substitutes undercores with the correclty guessed letters, in their orignal position from the random word.
 - If a letter have more than one occurence in the random word all the occurences will be display when the letter is gueesed.
 - Displays and updates the number of lives the user has after each wrong guess.
-- Number of lives adapts to the difficulty of the word.
+- Number of lives adapts to the difficulty of the random word.
     
 
 ## Licence

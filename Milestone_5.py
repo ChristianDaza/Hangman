@@ -34,7 +34,7 @@ class  Hangman:
         self.word_guessed = ["_"]*len(self.word)
         self.word_list = word_list
         self.num_letters = len(set(self.word))
-        self.num_lives = self.num_lives =  self.num_letters if self.num_letters > 5 else 5
+        self.num_lives = self.num_letters if self.num_letters > 5 else 5
         self.list_letters = []
 
         print(f"The mistery word has {self.num_letters} characters.")

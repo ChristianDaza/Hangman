@@ -32,9 +32,9 @@ git clone https://github.com/ChristianDaza/Hangman.git
 
 ## Usage
 
-Once cloned, use the command line to navigate to the clone repository. Then move to the SRC folder and run:
+Once cloned, use the command line to navigate to the repository. Then move to the SRC folder and run:
 ```
-python3 Milestone_5.py
+python3 Play_hangman.py
 ```
 Upon runnign the file, the number of unique letters in the word will be shown to the user, as well as the lenght of the word  as individual undercores. 
 ```

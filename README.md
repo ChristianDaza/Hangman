@@ -70,11 +70,11 @@ You lost!
 - Requires minimal coding from the user.
 - Already comes with a list of words with varying degrees of difficulty.
 - Displays the number of letters to the user as underscores.
-- Gives feedback to the user based on the guess.
 - Substitutes undercores with the correclty guessed letters, in their orignal position from the random word.
 - If a letter have more than one occurence in the random word all the occurences will be display when the letter is gueesed.
 - Displays and updates the number of lives the user has after each wrong guess.
 - Number of lives adapts to the difficulty of the random word.
+- The code in this Python script can be run as individual cells, when view in Visual Studio Code due to the #%% symbol above the code.
     
 
 ## Licence

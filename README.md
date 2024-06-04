@@ -15,6 +15,7 @@ Hangman is a Python script that allows the user to play the hangman game in the 
 - [Usage](#Usage)
 - [Main Features](#Main_Features)
 - [Lincence](#Licence)
+- [Contact Information](#Contact_information)
 
 
 ## Installation
@@ -49,8 +50,11 @@ If the guess is correct the corresponding underscore will be switched to guessed
 - Number of lives adapts to the difficulty of the word.
     
 
-
-
 ## Licence
 [MIT](https://github.com/ChristianDaza/Hangman/blob/main/LICENSE)
+
+## Contact Information
+- Christian
+- ch.arenasdaza@gmail.com
+- [GitHub](https://github.com/ChristianDaza)
 

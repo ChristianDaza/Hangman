@@ -37,7 +37,7 @@ class  Hangman:
         self.num_lives = self.num_lives =  self.num_letters if self.num_letters > 5 else 5
         self.list_letters = []
 
-        print(f"The mistery word has {self.num_letters} characters")
+        print(f"The mistery word has {self.num_letters} characters.")
         print(self.word_guessed)
 
     def check_guess(self, guess):
@@ -89,7 +89,7 @@ class  Hangman:
                 A string telling the user that the letter had alrady being used for a previous guess.
         """
         while True:
-            guess = input("Please enter a letter").replace(" ", "")
+            guess = input("Please enter a letter:").replace(" ", "")
             if guess.isalpha() == False or len(guess) != 1:
                 print("Invalid letter. Please, enter a single alphabetical character.")
                 guess 
